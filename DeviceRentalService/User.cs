@@ -9,5 +9,7 @@ public abstract class User(int id, string firstname, string lastname, UserType u
     public string Lastname { get; } =  lastname;
     public UserType UserType { get; } = userType;
 
+    public abstract int GetMaxRentals();
+
 }
 
