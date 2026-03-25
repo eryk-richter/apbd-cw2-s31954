@@ -1,7 +1,7 @@
 namespace DeviceRentalService;
 using Enums;
 
-public abstract class User(int id, string firstname, string lastname, UserType userType) {
+public abstract class User(string firstname, string lastname, UserType userType) {
     private static int _nextId = 1;
     
     public int Id { get; } = _nextId++;
