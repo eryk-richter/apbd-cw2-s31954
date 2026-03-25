@@ -1,6 +1,6 @@
 using DeviceRentalService.Enums;
 
-namespace DeviceRentalService;
+namespace DeviceRentalService.Models;
 
 public abstract class Device (string name){
     private static int _nextId = 1;

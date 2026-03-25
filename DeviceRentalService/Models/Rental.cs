@@ -1,6 +1,6 @@
 using DeviceRentalService.Enums;
 
-namespace  DeviceRentalService;
+namespace  DeviceRentalService.Models;
 
 public class Rental(Device device, User user, DateTime from, DateTime to) {
     private static int _nextId = 1;

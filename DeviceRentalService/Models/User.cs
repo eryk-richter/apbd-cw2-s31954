@@ -1,4 +1,4 @@
-namespace DeviceRentalService;
+namespace DeviceRentalService.Models;
 using Enums;
 
 public abstract class User(string firstname, string lastname, UserType userType) {
