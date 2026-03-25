@@ -1,3 +1,5 @@
+using DeviceRentalService.Enums;
+
 namespace DeviceRentalService;
 
 public abstract class Device (string name){
@@ -5,5 +7,5 @@ public abstract class Device (string name){
     
     public int Id { get; }  = _nextId++;
     public string Name { get; set; } = name;
-    public bool IsAvailable { get; set; } = false;
+    public DeviceStatus Status { get; set; } = DeviceStatus.Available;
 }
