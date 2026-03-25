@@ -9,9 +9,11 @@ public interface IRentalService {
     public double ReturnDevice(User user, Device device, DateTime returnDate); 
     public List<Rental> GetOverdueRentals();
     public string GenerateRaport();
-    public void CreateDevice();
+    public void CreateDevice(Device device);
     public List<Device> GetAllDevices();
     public List<Device> GetAvailableDevices();
     public void ChangeDeviceStatus(Device device,  DeviceStatus newStatus);
     public DeviceStatus GetDeviceStatus(Device device);
+    public List<User> GetUsersOverdue();
+    public List<User> GetAllUsers();
 }

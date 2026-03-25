@@ -3,5 +3,4 @@
 public enum RentalStatus {
     Open,
     Closed,
-    Overdue
 }
