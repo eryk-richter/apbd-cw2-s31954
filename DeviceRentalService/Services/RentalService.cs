@@ -17,12 +17,14 @@ public class RentalService : IRentalService{
     }
     
     public void RentDevice(User user, Device device, DateTime from, DateTime to) {
-        if (GetUserRentals(user).Count > user.GetMaxRentals()) throw new RentalLimitReachedException("Rental limit reached");
+        if (GetUserRentals(user).Count >= user.GetMaxRentals()) throw new RentalLimitReachedException("Rental limit reached");
         
         if ( device.Status != DeviceStatus.Available) throw new DeviceNotAvailableException("Device not available");
         
-        _rentals.Add(new Rental(device, user, from, to));
         
+        _rentals.Add(new Rental(device, user, from, to));
+        device.Status = DeviceStatus.NotAvailable;
+
     }
 
     public List<Rental> GetUserRentals(User user) {
